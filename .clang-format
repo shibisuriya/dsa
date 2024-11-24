@@ -1,0 +1,15 @@
+BasedOnStyle: Google
+IndentWidth: 6
+ColumnLimit: 120
+UseTab: Never
+TabWidth: 4
+AlignAfterOpenBracket: Align
+AllowShortIfStatementsOnASingleLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+PointerAlignment: Left
+SpacesBeforeTrailingComments: 1
+CommentPragmas: '^.*$'
+SortIncludes: true
+SpaceBeforeParens: ControlStatements
+MaxEmptyLinesToKeep: 1
+Cpp11BracedListStyle: true
