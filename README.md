@@ -1,3 +1,3 @@
-# DSA
+# Data Structure and Algorithms
 
-Me practicing DSA.
+Me practicing Data Structures and Algorithms.
