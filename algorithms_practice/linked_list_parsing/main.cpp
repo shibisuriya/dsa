@@ -9,7 +9,7 @@ struct ListNode {
       ListNode *next;
 };
 
-pair<ListNode *, ListNode *> parse() {
+pair<ListNode *, ListNode *> parse_input() {
       string line_1, line_2;
       vector<pair<ListNode *, ListNode *>> inputs;
       ListNode *head_1 = nullptr;
@@ -51,12 +51,21 @@ pair<ListNode *, ListNode *> parse() {
 
 class Solution {
      public:
-      ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
+      ListNode *parseLinkedLists(ListNode *l1, ListNode *l2) {
             ListNode *head_1 = l1;
+            ListNode *head_2 = l2;
+
             cout << "L1 -> ";
             while (head_1) {
                   cout << head_1->val << " ";
                   head_1 = head_1->next;
+            }
+            cout << endl;
+
+            cout << "L2 -> ";
+            while (head_2) {
+                  cout << head_2->val << " ";
+                  head_2 = head_2->next;
             }
             cout << endl;
       }
@@ -64,8 +73,7 @@ class Solution {
 
 int main() {
       Solution solution;
-      pair<ListNode *, ListNode *> inputs = parse();
-      solution.addTwoNumbers(inputs.first, inputs.second);
-
+      pair<ListNode *, ListNode *> inputs = parse_input();
+      solution.parseLinkedLists(inputs.first, inputs.second);
       return 0;
 }
