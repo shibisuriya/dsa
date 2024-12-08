@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 
-
 using namespace std;
 
 pair<vector<int>, int> parse_input() {
@@ -21,14 +20,15 @@ pair<vector<int>, int> parse_input() {
 class Solution {
      public:
       vector<int> twoSum(vector<int>& nums, int target) {
-            for (int i = 0; i < nums.size() - 1; i++) {
-                  for (int j = i + 1; j < nums.size(); j++) {
-                        if (nums[i] + nums[j] == target) {
-                              return vector<int>{i, j};
-                        }
+            unordered_map<int, int> num_map;
+            for (int i = 0; i < nums.size(); i++) {
+                  if (num_map.count(nums[i])) {
+                        return {num_map.at(nums[i]), i};
+                  } else {
+                        num_map.insert({target - nums[i], i});
                   }
             }
-            return vector<int>{};
+            return {};
       }
 };
 
