@@ -1,3 +1,12 @@
+// Topological sort
+//
+// Any linear ordering of vertices such that there is
+// an edge between vertex u & vertex v, where u appears before v in that order.
+//
+// Topological sort only exists in DAG (Directed Acyclic grpah)!
+// 1. If the graph is non directed, then an edge between A and B is an edge between B and A.
+// 2. If the graph has cycles, and if nodes A and B belonged to the cyclic region of the graph, then
+// A would lead to B and B would lead to A. Which means A can't come before B and B can't come before A.
 
 #include <bits/stdc++.h>
 
